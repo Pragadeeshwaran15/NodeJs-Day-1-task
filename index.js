@@ -3,7 +3,7 @@ import fs from 'fs'
 import { format } from 'date-fns';
 import path from 'path';
 
-const PORT=8000;
+const PORT=process.env.PORT ||8000;
 let app=express()
 app.use(express.json())
 app.get('/',(req,res)=>{
